@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donezo</title>
+</head>
+
+<body>
+  <div class="container">
+    <section class="nav-bar">
+      <ul class="task-category-list">
+        <li>
+          <button class="task-category__button today">
+            <img src="svg/today-icon.svg" alt="" />Today
+            <span class="task-category__counter today">0</span>
+          </button>
+        </li>
+        <li>
+          <button class="task-category__button overdue">
+            <img src="svg/overdue-icon.svg" alt="" />Overdue
+            <span class="task-category__counter overdue">0</span>
+          </button>
+        </li>
+        <li>
+          <button class="task-category__button tomorrow">
+            <img src="svg/tomorrow-icon.svg" alt="" /> Tomorrow
+            <span class="task-category__counter tomorrow">0</span>
+          </button>
+        </li>
+        <li>
+          <button class="task-category__button someday">
+            <img src="svg/someday-icon.svg" alt="" />Someday
+            <span class="task-category__counter someday">0</span>
+          </button>
+        </li>
+        <li>
+          <button class="task-category__button important">
+            <img src="svg/important-icon.svg" alt="" />Important
+            <span class="task-category__counter important">0</span>
+          </button>
+        </li>
+        <li>
+          <button class="task-category__button all-tasks">
+            <img src="svg/all-tasks-icon.svg" alt="" />All tasks
+            <span class="task-category__counter all-tasks">0</span>
+          </button>
+        </li>
+      </ul>
+
+      <ul class="project-list">
+        <li class="project-list__header">
+          <h2>Projects</h2>
+        </li>
+        <li>
+          <button class="project-list__folder" id="folder-1">
+            <div class="project-list__folder-icon base-circle" data-color-fill="A1"></div>
+            Study
+            <span class="project-list__counter">0</span>
+          </button>
+        </li>
+        <li>
+          <button class="project-list__folder" id="folder-2">
+            <div class="project-list__folder-icon base-circle" data-color-fill="A2"></div>
+            Fitness
+            <span class="project-list__counter">0</span>
+          </button>
+        </li>
+        <li>
+          <button class="project-list__folder" id="folder-3">
+            <div class="project-list__folder-icon base-circle" data-color-fill="A3"></div>
+            Work
+            <span class="project-list__counter">0</span>
+          </button>
+        </li>
+        <li>
+          <button class="project-list__add-button">
+            <img src="svg/add-tasks-icon.svg" alt="" />
+            Add Project
+          </button>
+        </li>
+      </ul>
+    </section>
+    <section class="group-content">
+      <div class="group-content__heading">
+        <h1>Today</h1>
+        <span>Pending Tasks: <span id="group-content__counter--pending">0</span>
+        </span>
+        <span>Completed Tasks:
+          <span id="group-content__counter--completed">0</span>
+        </span>
+      </div>
+      <div class="group-content__form">
+        <img src="svg/add-tasks-icon.svg" alt="" />
+        <input type="text" name="" id="add-task-input" class="group-content__form-input"
+          placeholder="Add tasks for today, press enter to save." />
+      </div>
+      <ul class="group-content__tasks">
+        <li>
+          <ul class="group-content__project">
+            <li class="project__details">
+              <h2>Study</h2>
+            </li>
+            <li class="project__task">
+              <button class="task-status task-status--pending" data-color-fill="A1"></button>
+              <span class="project-task__title">Study Javascript</span>
+              <div class="project-task__priority project-task__priority--critical">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+              </span>
+              <span class="project-task__due-date">June 22</span>
+            </li>
+            <li class="project__task">
+              <button class="task-status task-status--pending" data-color-fill="A1"></button>
+              <span class="project-task__title">Study CSS</span>
+              <div class="project-task__priority project-task__priority--high">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+              <span class="project-task__due-date">June 22</span>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <ul class="group-content__project">
+            <li class="project__details">
+              <h2>Work</h2>
+            </li>
+            <li class="project__task">
+              <button class="task-status task-status--pending" data-color-fill="A3"></button>
+              <span class="project-task__title">Finish Website</span>
+              <div class="project-task__priority project-task__priority--medium">
+                <div></div>
+                <div></div>
+              </div>
+              <span class="project-task__due-date">Nov 19</span>
+            </li>
+            <li class="project__task">
+              <button class="task-status task-status--pending" data-color-fill="A3"></button>
+              <span class="project-task__title">Finish Branding</span>
+              <div class="project-task__priority project-task__priority--low">
+                <div></div>
+              </div>
+              <span class="project-task__due-date">Nov 19</span>
+            </li>
+          </ul>
+        </li>
+        <br>
+        <li class="project__task">
+          <button class="task-status task-status--pending" data-color-fill="A1"></button>
+          <span class="project-task__title">Study Javascript</span>
+          <div class="project-task__priority project-task__priority--critical">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          </span>
+          <span class="project-task__due-date">June 22</span>
+        </li>
+        <li class="project__task">
+          <button class="task-status task-status--pending" data-color-fill="A1"></button>
+          <span class="project-task__title">Study CSS</span>
+          <div class="project-task__priority project-task__priority--high">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <span class="project-task__due-date">June 22</span>
+        </li>
+      </ul>
+    </section>
+    <!-- 
+    <section class="task">
+      <div class="task__heading">
+        <button class="task-status task-status--pending" data-color-fill="A1"></button>
+        <h2>Study Javascript</h2>
+      </div>
+      <div class="task__due-date">
+        <h3>Due Date:</h3>
+        <span class="task__due-date__value">Nov 19, 2024</span>
+      </div>
+      <div class="task__priority">
+        <h3>Priority:</h3>
+        <div class="task__priority__container">
+          <button class="task__priority__level task__priority__level--critical"></button>
+          <button class="task__priority__level task__priority__level--high"></button>
+          <button class="task__priority__level task__priority__level--medium"></button>
+          <button class="task__priority__level task__priority__level--low"></button>
+        </div>
+      </div>
+      <div class="task__project">
+        <h3>Project:</h3>
+        <div class="task__project__value"> Study
+        </div>
+      </div>
+      <div class="task__description">
+        <h3>Description:</h3>
+        <textarea name="modify-task__description" disabled id=""> Study JavaScript" is an essential task for anyone diving into web development, focusing on understanding the core language of the web. This task involves exploring JavaScript's syntax, functions, and event handling, which are crucial for creating dynamic and interactive web applications.
+          </textarea>
+      </div>
+      <div class="task__notes">
+        <h3>Additional Notes:</h3>
+        <p class="task__notes__value">
+          Study JavaScript" is an essential task for anyone diving into web
+          development, focusing on understanding the core language of the web.
+          This task involves exploring JavaScript's syntax, functions, and
+          event handling, which are crucial for.
+        </p>
+      </div>
+    </section>
+    -->
+    <section class="task modify-task">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" class="close-button"
+        xmlns="http://www.w3.org/2000/svg">
+        <path d="M18.3157 2.19079L2.12409 18.3824" stroke="#4E3EAD" stroke-width="3" stroke-linecap="round"
+          stroke-linejoin="round" />
+        <path d="M2.12403 2.19079L18.3157 18.3824" stroke="#4E3EAD" stroke-width="3" stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg>
+
+      <div class="task__heading modify-task__heading">
+        <button class="task-status task-status--pending" data-color-fill="A1"></button>
+        <input type="text" name="" id="" value="Study Javascript" placeholder="Add your task here">
+      </div>
+      <div class="task__due-date">
+        <h3>Due Date:</h3>
+        <input type="date">
+      </div>
+      <div class="task__priority">
+        <h3>Priority:</h3>
+        <div class="task__priority__container">
+          <button class="task__priority__level task__priority__level--critical"></button>
+          <button class="task__priority__level task__priority__level--high"></button>
+          <button class="task__priority__level task__priority__level--medium"></button>
+          <button class="task__priority__level task__priority__level--low"></button>
+        </div>
+      </div>
+      <div class="task__project">
+        <h3>Project:</h3>
+        <select name="Car">
+          <option value="mercedes">Mercedes</option>
+          <option value="tesla">Tesla</option>
+          <option value="volvo">Volvo</option>
+          <option value="bmw">BMW</option>
+          <option value="mini">Mini</option>
+          <option value="ford">Ford</option>
+        </select>
+      </div>
+      <div class="task__description">
+        <h3>Description:</h3>
+        <textarea name="modify-task__description"
+          id="">Study JavaScript" is an essential task for anyone diving into web development, focusing on understanding the core language of the web. This task involves exploring JavaScript's syntax, functions, and event handling, which are crucial for creating dynamic and interactive web applications.</textarea>
+      </div>
+      <div class="task__notes">
+        <h3>Additional Notes:</h3>
+        <textarea name="task__notes__value"
+          id="">Study JavaScript" is an essential task for anyone diving into web development, focusing on understanding the core language of the web. This task involves exploring JavaScript's syntax, functions, and event handling, which are crucial for creating dynamic and interactive web applications.</textarea>
+      </div>
+      <div class="task__buttons">
+        <button class="task__button--save">Save</button>
+        <button class="task__button--delete">Delete</button>
+
+      </div>
+    </section>
+  </div>
+</body>
+
+</html>
